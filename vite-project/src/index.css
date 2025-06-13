@@ -49,3 +49,25 @@ section.box-section{
 .box{
   background-color: white;
 }
+
+.counter{
+  background-color: lightcyan;
+  height: 50vh;
+}
+.counter .container{
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+.counter__controls{
+  display: flex;
+  gap: 20px;
+}
+.counter__controls button{
+  padding: 10px 20px;
+  border: none;
+  background-color: lightseagreen;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
