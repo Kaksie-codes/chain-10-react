@@ -1,16 +1,26 @@
+import { useState } from 'react'
 import './App.css'
 import BoxSection from './components/Box-section'
 import Counter from './components/Counter'
 import { Header } from './components/Header'
+import Typist from './components/typist'
 import User from './components/User'
 
 function App() {
- 
+  const [title, setTitle] = useState('Typist');
+    const handleTitleChange = (e) => {
+        console.log({title: e.target.value})
+        setTitle(e.target.value)
+    }
 
   return (
    <div>
-    <Header/>
+    <Header title={title}/>
     <Counter/>
+    <Typist 
+      name={title} 
+      handleChange={handleTitleChange}
+    />
     {/* <User name={'Mfoniso'} age={35} ocupation={'trader'}/>
     <User 
       name={'Uduak'} 
