@@ -9,6 +9,7 @@ const Other = () => {
   const [unitPrice, setUnitPrice] = useState(0);
   const [quantity, setQuantity] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const cars = ['Honda', 'Keke', "Hyundai", "lamborghini", "Ferarri"]
 
     // const [title, setTitle] = useState('Typist');
     // const handleTitleChange = (e) => {
@@ -17,6 +18,13 @@ const Other = () => {
     // }
   return (
     <div>
+      <div>
+        {
+          cars.map((car, index) => (
+            <p key={index}>{car}</p>
+          ))
+        }
+      </div>
       <Display
         price={unitPrice}
         qty={quantity}
