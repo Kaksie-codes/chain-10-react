@@ -1,0 +1,35 @@
+.input-profile-data{
+    border: 1px solid #ccc;
+    padding: 30px;
+    width: fit-content;
+}
+.form-group{
+    margin-bottom: 15px;
+    width: 400px;
+}
+.form-group input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.profile-content{
+    display: flex;    
+    gap: 40px;
+}
+.profile-pic{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-card-container{
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: antiquewhite;
+}
+.profile-cards-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
