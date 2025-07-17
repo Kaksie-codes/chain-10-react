@@ -1,38 +1,20 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useState, useContext } from "react";
 
+// Create the context
 const ThemeContext = createContext();
 
-export const useTheme = () => {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider');
-  }
-  return context;
-};
-
+// Create the provider
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('light');
-  const [fontSize, setFontSize] = useState('medium');
-  const [language, setLanguage] = useState('en');
+  const [darkMode, setDarkMode] = useState(false);
 
-  const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light');
-  };
-
-  const value = {
-    theme,
-    fontSize,
-    language,
-    toggleTheme,
-    setFontSize,
-    setLanguage
-  };
+  const toggleTheme = () => setDarkMode((prev) => !prev);
 
   return (
-    <ThemeContext.Provider value={value}>
+    <ThemeContext.Provider value={{ darkMode, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
 };
 
-export default ThemeContext;
+// Custom hook to use the context
+export const useTheme = () => useContext(ThemeContext);

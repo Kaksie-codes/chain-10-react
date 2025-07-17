@@ -4,6 +4,7 @@ import Counter from './components/Counter'
 import Hooks from './components/hooks/Hooks'
 import Other from './components/Other'
 import Profile from './components/profilefeature/Profile'
+import ThemeToggler from './components/ThemeToggler'
 import ToggleExample from './components/ToggleExample'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
   return (
    <div>  
     <ToggleExample/> 
+    <ThemeToggler/>
     {/* <Animal/> */}
     {/* <Other/> */}
     {/* <Hooks/>   */}
