@@ -1,7 +1,7 @@
 import { createContext, useState, useContext } from "react";
 
 // Create the context
-const ThemeContext = createContext();
+export const ThemeContext = createContext();
 
 // Create the provider
 export const ThemeProvider = ({ children }) => {
