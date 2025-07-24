@@ -9,8 +9,8 @@ const TitleProvider = ({children}) => {
   const resetTitle = () => setTitle('NFT');
 
   const initialState = {
-    title,
-    setTitle,
+    title: title,
+    setTitle: setTitle,
     resetTitle
   }
 
